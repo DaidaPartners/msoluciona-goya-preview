@@ -146,7 +146,7 @@ p{margin:0 0 1em;overflow-wrap:break-word;hyphens:auto}
 .lateral-caja .boton-tel{background:#fff;color:var(--marino)}
 .lateral-titulo{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin:0}
 .lateral-caja .nota-pequena a{color:var(--sol)}
-@media (max-width:959px){.servicio-lateral{position:static}}
+@media (max-width:959px){.servicio-lateral{display:none}}
 .lista-docs{list-style:none;padding:0;margin:0}
 
 /* Preguntas */
@@ -192,3 +192,11 @@ p{margin:0 0 1em;overflow-wrap:break-word;hyphens:auto}
 @media (min-width:700px){.wa-flotante{padding:.8rem 1.3rem .8rem 1rem}.wa-flotante span{display:inline}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .foto-entera{aspect-ratio:auto;object-fit:contain}
+/* Ajustes de accesibilidad con letra grande */
+.servicio-rejilla{grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){.servicio-rejilla{grid-template-columns:minmax(0,1fr) 19rem}}
+.pasos li>span,.rejilla-gestion li>span,.rejilla-incluye li>span,.lista-check li{min-width:0;overflow-wrap:break-word}
+.logo{display:inline-flex;align-items:center;min-height:2.75rem}
+.pasos li>span,.rejilla-gestion li>span,.rejilla-incluye li>span,.lista-check li{hyphens:auto}
+.pasos-grandes li{font-size:1.05rem}
+@media (max-width:420px){.pasos li,.rejilla-gestion li{gap:.7rem;padding:.9rem}}
