@@ -8,7 +8,7 @@
 <meta name="description" content="Cuidadora interna que convive en casa: compañía y atención continua, también fines de semana y festivos.">
 <meta name="theme-color" content="#1c204d">
 <link rel="icon" href="/img/cropped-icono-msoluciona-goya-madrid.webp" type="image/webp">
-<link rel="stylesheet" href="/estilos.css?v=e768ae3">
+<link rel="stylesheet" href="/estilos.css?v=404e430">
 </head>
 <body>
 
@@ -147,12 +147,13 @@ function cerrar(){if(d.open){d.open=false;d.querySelector("summary").focus();}}
 document.querySelectorAll("[data-cerrar-menu]").forEach(function(b){b.addEventListener("click",cerrar);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrar();});
 document.addEventListener("click",function(e){if(d.open&&(!d.contains(e.target)||e.target.hasAttribute("data-fondo-menu")))cerrar();});
+var ancho=window.matchMedia("(min-width:1024px)");
 var caja=d.querySelector(".menu-caja"),mas=d.querySelector("[data-menu-mas]");
-function revisar(){if(!d.open)return;var fin=caja.scrollTop+caja.clientHeight>=caja.scrollHeight-mas.offsetHeight-4;mas.classList.toggle("menu-mas-oculto",fin);}
+function revisar(){if(!d.open)return;var ver=mas.classList.contains("menu-mas-ver"),fin=caja.scrollTop+caja.clientHeight>=caja.scrollHeight-(ver?mas.offsetHeight:0)-4;mas.classList.toggle("menu-mas-ver",!fin&&!ancho.matches);}
 caja.addEventListener("scroll",revisar,{passive:true});window.addEventListener("resize",revisar);
 mas.addEventListener("click",function(){caja.scrollBy({top:caja.clientHeight*0.6,behavior:"smooth"});});
 d.addEventListener("toggle",function(){document.documentElement.classList.toggle("menu-abierto",d.open);if(d.open){caja.scrollTop=0;requestAnimationFrame(revisar);}});
-var ancho=window.matchMedia("(min-width:1024px)");
+
 var c=document.querySelector(".cabecera"),ult=window.scrollY;
 window.addEventListener("scroll",function(){var y=window.scrollY;if(d.open||ancho.matches){c.classList.remove("cabecera-oculta");ult=y;return;}
 if(y>ult+8&&y>c.offsetHeight){c.classList.add("cabecera-oculta");}else if(y<ult-8||y<=c.offsetHeight){c.classList.remove("cabecera-oculta");}ult=y;},{passive:true});

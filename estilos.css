@@ -278,3 +278,17 @@ body{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
 .menu-mas-texto{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.35rem 1.1rem;border:2px solid var(--marino);border-radius:999px;background:#fff;box-shadow:0 -.6rem .8rem #fff}
 .menu-mas-texto span{font-size:1.3rem;line-height:1}
 .menu-llamar .boton{padding-inline:1rem}
+/* Ronda abuela 4 */
+/* Aviso «Más opciones»: banda opaca, solo en el móvil y solo si el menú no cabe */
+.menu-mas{display:none;background:#fff;padding:.5rem 0;box-shadow:none}
+.menu-mas::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:1.75rem;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none}
+.menu-mas.menu-mas-ver{display:flex}
+.menu-mas-texto{box-shadow:none}
+@media (min-width:1024px){.menu-mas,.menu-mas.menu-mas-ver{display:none!important}}
+/* Barra: el contenido puede encoger; sin sitio, se oculta el icono */
+.barra-movil a{container-type:inline-size;padding:0 6px;gap:4px}
+.barra-movil a span{min-width:0}
+@container (max-width:6.7em){.barra-movil a svg{display:none}}
+/* Correo: la letra se ajusta al ancho de la tarjeta */
+.contacto-caja{container-type:inline-size}
+.contacto-caja .correo{font-size:min(1.35rem,calc(100cqi / 9.4))}
