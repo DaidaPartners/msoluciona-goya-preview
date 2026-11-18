@@ -299,3 +299,37 @@ body{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
 .menu-caja{padding-bottom:0}
 .menu-lista{margin-bottom:1rem}
 .menu-mas-texto{white-space:nowrap}
+/* Ronda abuela 5 */
+/* Guiones: el navegador parte las palabras con guion (lang="es"); el corte sin guion queda solo como último recurso */
+*{-webkit-hyphens:auto;hyphens:auto}
+h1,h2,h3,p,li,span,strong,a{overflow-wrap:break-word}
+.correo,a[href^="mailto"],.tel-num,.boton,.barra-movil a,.menu-cerrar,.menu summary{-webkit-hyphens:manual;hyphens:manual}
+a[href^="mailto"],.correo .tel-num{overflow-wrap:anywhere}
+/* Títulos más pequeños en pantallas estrechas para que las palabras largas quepan enteras */
+h1{font-size:min(clamp(2.1rem,6vw + .5rem,3.6rem),10.5vw)}
+h2{font-size:min(clamp(1.6rem,3vw + .6rem,2.4rem),8.5vw)}
+h3{font-size:min(1.3rem,7.2vw)}
+/* Las columnas dependen del tamaño de la letra, no solo del ancho de la pantalla */
+main{container-type:inline-size}
+@media (min-width:960px){.servicio-rejilla{grid-template-columns:minmax(0,1fr)}.servicio-lateral{display:none}}
+@container (min-width:62rem){.servicio-rejilla{grid-template-columns:minmax(0,1fr) 19rem}.servicio-lateral{display:block}}
+/* Menú en el ordenador: dos columnas para que quepa; si aun así no cabe, sale el aviso «Más opciones» */
+@media (min-width:1024px){
+  .menu-lista{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:2rem}
+  .menu-mas.menu-mas-ver{display:flex!important}
+}
+/* Móvil estrecho: márgenes y rellenos que no crecen tanto con la letra grande, para que las palabras largas quepan */
+@media (max-width:480px){
+  .contenedor{width:min(100% - min(2.5rem,28px),72rem)}
+  .tarjeta-texto{padding:min(1.25rem,16px)}
+  .rejilla-incluye li,.pasos li,.rejilla-gestion li{padding:min(1rem,14px);gap:min(.7rem,10px)}
+  .rejilla-incluye svg,.pasos li>b,.rejilla-gestion li>b{flex-shrink:0}
+  .tarjeta-titulo{font-size:min(1.35rem,7vw)}
+  .rejilla-incluye strong,.pasos strong,.rejilla-gestion strong{font-size:min(1em,6.4vw)}
+}
+.pie-contacto a{overflow-wrap:break-word}
+.pie-contacto a[href^="mailto"]{overflow-wrap:anywhere}
+@media (max-width:480px){
+  .rejilla-incluye li>span,.rejilla-gestion li>span,.pasos li>span{font-size:min(1em,6.6vw)}
+  .pie-contacto{font-size:min(1rem,5.6vw)}
+}

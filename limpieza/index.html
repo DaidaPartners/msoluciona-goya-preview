@@ -8,7 +8,7 @@
 <meta name="description" content="Oficinas, comunidades de vecinos, apartamentos turísticos, naves e industria.">
 <meta name="theme-color" content="#1c204d">
 <link rel="icon" href="/img/cropped-icono-msoluciona-goya-madrid.webp" type="image/webp">
-<link rel="stylesheet" href="/estilos.css?v=8ec21a9">
+<link rel="stylesheet" href="/estilos.css?v=bf68575">
 </head>
 <body>
 
@@ -141,7 +141,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrar();});
 document.addEventListener("click",function(e){if(d.open&&(!d.contains(e.target)||e.target.hasAttribute("data-fondo-menu")))cerrar();});
 var ancho=window.matchMedia("(min-width:1024px)");
 var caja=d.querySelector(".menu-caja"),mas=d.querySelector("[data-menu-mas]");
-function revisar(){if(!d.open)return;var ver=mas.classList.contains("menu-mas-ver"),fin=caja.scrollTop+caja.clientHeight>=caja.scrollHeight-(ver?mas.offsetHeight:0)-4;mas.classList.toggle("menu-mas-ver",!fin&&!ancho.matches);}
+function revisar(){if(!d.open)return;var ver=mas.classList.contains("menu-mas-ver"),fin=caja.scrollTop+caja.clientHeight>=caja.scrollHeight-(ver?mas.offsetHeight:0)-4;mas.classList.toggle("menu-mas-ver",!fin);}
 caja.addEventListener("scroll",revisar,{passive:true});window.addEventListener("resize",revisar);
 mas.addEventListener("click",function(){caja.scrollBy({top:caja.clientHeight*0.6,behavior:"smooth"});});
 d.addEventListener("toggle",function(){document.documentElement.classList.toggle("menu-abierto",d.open);if(d.open){caja.scrollTop=0;requestAnimationFrame(revisar);}});
