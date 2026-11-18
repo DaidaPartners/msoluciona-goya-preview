@@ -292,3 +292,6 @@ body{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
 /* Correo: la letra se ajusta al ancho de la tarjeta */
 .contacto-caja{container-type:inline-size}
 .contacto-caja .correo{font-size:min(1.35rem,calc(100cqi / 9.4))}
+/* 320 px con letra grande: las listas no pueden ensanchar la página */
+.pasos,.datos-legales{grid-template-columns:minmax(0,1fr)}
+.pasos li,.datos-legales li{min-width:0;overflow-wrap:break-word}
