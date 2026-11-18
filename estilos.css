@@ -295,3 +295,7 @@ body{padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
 /* 320 px con letra grande: las listas no pueden ensanchar la página */
 .pasos,.datos-legales{grid-template-columns:minmax(0,1fr)}
 .pasos li,.datos-legales li{min-width:0;overflow-wrap:break-word}
+/* La banda se pega al borde de abajo del menú: sin relleno por debajo para que no asome texto */
+.menu-caja{padding-bottom:0}
+.menu-lista{margin-bottom:1rem}
+.menu-mas-texto{white-space:nowrap}
