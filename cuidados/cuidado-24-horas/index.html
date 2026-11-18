@@ -23,14 +23,19 @@
 <nav class="menu" aria-label="Menú principal">
   <details class="menu-desplegable">
     <summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg><span>Menú</span></summary>
-    <div class="menu-panel">
-      <button type="button" class="menu-cerrar" data-cerrar-menu>Cerrar <span aria-hidden="true">✕</span></button>
+    <div class="menu-panel" data-fondo-menu>
+     <div class="menu-caja">
+      <div class="menu-arriba"><span class="menu-titulo">Menú</span><button type="button" class="menu-cerrar" data-cerrar-menu>Cerrar <span aria-hidden="true">✕</span></button></div>
       <ul class="menu-lista">
         <li><a href="/">Inicio</a></li>
         <li><a href="/cuidados/">Cuidados en casa</a></li><li><a href="/hogar/">Hogar y empleo doméstico</a></li><li><a href="/limpieza/">Limpieza para empresas y comunidades</a></li><li><a href="/ayudas/">Ayudas y financiación</a></li>
         <li><a href="/como-trabajamos/">Cómo trabajamos</a></li>
+        <li><a href="/quienes-somos/">Quiénes somos</a></li>
+        <li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li>
         <li><a href="/contacto/">Contacto</a></li>
       </ul>
+      <p class="menu-pie"><a href="tel:+34911100966"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Llamar al 911 100 966</a></p>
+     </div>
     </div>
   </details>
 </nav>
@@ -58,7 +63,7 @@
       <h2>Cómo funciona</h2>
       
       
-      <ol class="pasos"><li><span class="num">1</span><span>Nos contactas y un asesor te hace una entrevista personal.</span></li><li><span class="num">2</span><span>El asesor estudia el caso, analiza las opciones y preselecciona a las personas más adecuadas.</span></li><li><span class="num">3</span><span>En el plazo de un día preparamos un informe con tres candidatas para que las valoréis.</span></li><li><span class="num">4</span><span>Elegís a la persona y empieza el servicio.</span></li></ol>
+      <ol class="pasos"><li><span class="num">1</span><span>Nos contactas y un asesor te hace una entrevista personal.</span></li><li><span class="num">2</span><span>El asesor estudia el caso y elige a las personas que mejor encajan.</span></li><li><span class="num">3</span><span>Para este servicio de interna, en un día te damos un informe con tres candidatas para que las conozcáis. (En otros servicios, la selección suele llevar unos 3 días laborables.)</span></li><li><span class="num">4</span><span>Elegís a la persona y empieza el servicio.</span></li></ol>
     </section>
     
     
@@ -86,7 +91,7 @@
 </a>
 <a class="tarjeta" href="/cuidados/cuidado-por-horas/">
   <img class="tarjeta-foto" src="/img/cuidado-mayores-por-horas-madrid-msoluciona-goya-0-800.webp" srcset="/img/cuidado-mayores-por-horas-madrid-msoluciona-goya-0-800.webp 800w, /img/cuidado-mayores-por-horas-madrid-msoluciona-goya-0-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="" loading="lazy" decoding="async">
-  <span class="tarjeta-texto"><span class="tarjeta-titulo">Cuidado por horas</span><span>Las horas que necesites: aseo, medicación, compañía y estimulación, en casa o en el hospital.</span><span class="tarjeta-mas">Ver servicio <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></span></span>
+  <span class="tarjeta-texto"><span class="tarjeta-titulo">Cuidado por horas</span><span>Las horas que necesites: aseo, medicinas, compañía y ejercicios para moverse, en casa o en el hospital.</span><span class="tarjeta-mas">Ver servicio <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></span></span>
 </a>
 <a class="tarjeta" href="/cuidados/acompanamiento-en-hospitales/">
   <img class="tarjeta-foto" src="/img/asistencia-hospitales-madrid-ayuda-domicilio-msoluciona-goya-2-800.webp" srcset="/img/asistencia-hospitales-madrid-ayuda-domicilio-msoluciona-goya-2-800.webp 800w, /img/asistencia-hospitales-madrid-ayuda-domicilio-msoluciona-goya-2-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="" loading="lazy" decoding="async">
@@ -97,7 +102,7 @@
 <section class="llamada-final" aria-labelledby="llamada-final-titulo">
   <div class="contenedor">
     <h2 id="llamada-final-titulo">¿Hablamos?</h2>
-    <p>Cuéntanos qué necesitas y te preparamos un presupuesto a tu medida, sin compromiso.</p>
+    <p>Cuéntanos qué necesitas y te ayudamos, sin compromiso.</p>
     <div class="botones"><a class="boton boton-wa " href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20en%20Madrid." target="_blank" rel="noopener" data-wa><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.1 9.9 10 5.1 16 5.1s10.9 4.8 10.9 10.7S22 26.4 16 26.4zm6-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>Escríbenos por WhatsApp</span></a><a class="boton boton-tel boton-claro" href="tel:+34911100966"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span>Llamar al 911 100 966</span></a></div>
     <p class="nota-pequena">Urgencias, los 365 días del año: <a href="tel:+34670786236">670 786 236</a></p>
   </div>
@@ -110,6 +115,10 @@
       <p>Empresa autorizada por la Consejería de Servicios Sociales de la Comunidad de Madrid. También somos agencia de colocación autorizada (número 9900000185): podemos buscar trabajadores para las familias.</p>
     </div>
     <div><h2 class="pie-titulo">Cuidados en casa</h2><ul><li><a href="/cuidados/cuidado-de-mayores/">Cuidado de personas mayores</a></li><li><a href="/cuidados/cuidado-24-horas/">Cuidado 24 horas e internas</a></li><li><a href="/cuidados/cuidado-por-horas/">Cuidado por horas</a></li><li><a href="/cuidados/acompanamiento-en-hospitales/">Acompañamiento en hospitales</a></li><li><a href="/cuidados/cuidado-nocturno/">Cuidado nocturno</a></li><li><a href="/cuidados/personas-con-enfermedad/">Cuidado de personas con enfermedad</a></li><li><a href="/cuidados/cuidado-de-ninos/">Cuidado de niños</a></li><li><a href="/cuidados/salud-a-domicilio/">Fisioterapia, podología y peluquería en casa</a></li></ul></div><div><h2 class="pie-titulo">Hogar y empleo doméstico</h2><ul><li><a href="/hogar/empleadas-de-hogar/">Empleadas de hogar</a></li><li><a href="/hogar/gestion-del-empleo-domestico/">Gestión del empleo doméstico</a></li><li><a href="/hogar/limpieza-del-hogar/">Limpieza del hogar</a></li><li><a href="/hogar/plancha-y-ropa/">Plancha, ropa y armarios</a></li></ul></div><div><h2 class="pie-titulo">Limpieza para empresas y comunidades</h2><ul><li><a href="/limpieza/oficinas/">Limpieza de oficinas</a></li><li><a href="/limpieza/empresas/">Limpieza y servicios para empresas</a></li><li><a href="/limpieza/comunidades-de-vecinos/">Comunidades de vecinos</a></li><li><a href="/limpieza/apartamentos-turisticos/">Apartamentos turísticos</a></li><li><a href="/limpieza/industrial/">Limpieza industrial y técnica</a></li><li><a href="/limpieza/fin-de-obra/">Limpieza de fin de obra</a></li><li><a href="/limpieza/cristales-y-fachadas/">Cristales en altura y fachadas</a></li></ul></div><div><h2 class="pie-titulo">Ayudas y financiación</h2><ul><li><a href="/ayudas/cheque-servicio/">Cheque servicio de la dependencia</a></li><li><a href="/ayudas/financiacion/">Financiación de los cuidados</a></li></ul></div>
+    <div>
+      <h2 class="pie-titulo">mSoluciona Goya</h2>
+      <ul><li><a href="/quienes-somos/">Quiénes somos</a></li><li><a href="/como-trabajamos/">Cómo trabajamos</a></li><li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="/contacto/">Contacto</a></li></ul>
+    </div>
     <div>
       <h2 class="pie-titulo">Contacto</h2>
       <ul class="pie-contacto">
@@ -136,7 +145,11 @@
 function cerrar(){if(d.open){d.open=false;d.querySelector("summary").focus();}}
 document.querySelectorAll("[data-cerrar-menu]").forEach(function(b){b.addEventListener("click",cerrar);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")cerrar();});
-document.addEventListener("click",function(e){if(d.open&&!d.contains(e.target))cerrar();});
+document.addEventListener("click",function(e){if(d.open&&(!d.contains(e.target)||e.target.hasAttribute("data-fondo-menu")))cerrar();});
+d.addEventListener("toggle",function(){document.documentElement.classList.toggle("menu-abierto",d.open);});
+var c=document.querySelector(".cabecera"),ult=window.scrollY;
+window.addEventListener("scroll",function(){var y=window.scrollY;if(d.open){ult=y;return;}
+if(y>ult+8&&y>c.offsetHeight){c.classList.add("cabecera-oculta");}else if(y<ult-8||y<=c.offsetHeight){c.classList.remove("cabecera-oculta");}ult=y;},{passive:true});
 })();
 </script>
 </body>

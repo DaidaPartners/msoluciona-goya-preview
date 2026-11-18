@@ -25,7 +25,7 @@ p{margin:0 0 1em;overflow-wrap:break-word;hyphens:none}
 .franja-previa{background:var(--sol);color:var(--marino);text-align:center;font-size:1rem;padding:.5rem 1rem;font-weight:600}
 
 /* Cabecera */
-.cabecera{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid #e8e3d8}
+.cabecera{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e8e3d8;transition:top .25s ease}
 .cabecera-fila{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:4.25rem;flex-wrap:wrap;padding-block:.4rem}
 .logo img{width:clamp(11rem,52vw,19rem);height:auto}
 .cabecera-acciones{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
@@ -222,3 +222,37 @@ body{padding-bottom:5.5rem}
 .pie{padding-bottom:3rem}
 @media (min-width:1024px){.pie{padding-bottom:6rem}}
 @media (max-width:1023px){.boton-cabecera{display:none}}
+
+/* Ronda abuela 2 */
+/* Cabecera compacta (medidas en px para que no crezca con la letra grande) y oculta al bajar */
+.cabecera-fila{min-height:56px;padding-block:4px;flex-wrap:nowrap;gap:12px}
+.logo{min-height:48px}
+.logo img{width:clamp(150px,46vw,260px)}
+.cabecera-acciones{flex-wrap:nowrap;gap:8px}
+.menu summary{font-size:18px;min-height:48px;padding:0 16px;gap:8px;line-height:1}
+.menu summary svg{width:22px;height:22px}
+.boton-cabecera{font-size:18px;min-height:48px;padding:0 16px}
+.cabecera-oculta{top:-80px}
+html.menu-abierto .cabecera{top:0}
+/* Menú: panel a pantalla completa por encima de todo, con fondo para tocar fuera */
+.menu-panel{position:fixed;inset:0;z-index:200;background:rgba(19,22,58,.6);padding:0 0 72px;max-height:none;overflow:hidden;border:0;box-shadow:none;display:block}
+.menu-caja{background:#fff;max-height:calc(100% - 0px);overflow-y:auto;overscroll-behavior:contain;padding:0 max(1rem,calc((100% - 40rem)/2)) 1rem;border-bottom:4px solid var(--verde);box-shadow:var(--sombra)}
+.menu-arriba{position:sticky;top:0;z-index:1;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #e8e3d8}
+.menu-titulo{font-family:var(--serif);font-weight:700;color:var(--marino);font-size:1.25rem}
+.menu-cerrar{margin:0;min-height:48px;min-width:0;font-size:18px}
+.menu-lista{margin-top:.25rem}
+.menu-lista a{min-height:3rem}
+.menu-pie{margin:1rem 0 0}
+.menu-pie a{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;font-weight:800;color:var(--marino)}
+html.menu-abierto,html.menu-abierto body{overflow:hidden}
+html.menu-abierto .barra-movil,html.menu-abierto .wa-flotante{display:none}
+/* Barra inferior compacta y con dos botones iguales */
+.barra-movil{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
+.barra-movil a{min-height:44px;font-size:17px;padding:0 10px;gap:6px;min-width:0;white-space:nowrap}
+.barra-movil svg{width:20px;height:20px}
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+@media (min-width:1024px){body{padding-bottom:0}}
+/* Zonas táctiles de 44 px como mínimo */
+.enlace-tactil,.migas a,.nota-pequena a,.llamada-final a:not(.boton){display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+/* Antetítulos legibles */
+.antetitulo{font-size:1rem;letter-spacing:.04em}
